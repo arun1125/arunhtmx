@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML Template</title>
+    <script src="https://unpkg.com/htmx.org@1.9.8"></script>
+</head>
+
+<body id="home">
+    <h1> Whats up im Arun </h1>
+    <h2> This is my corner of the internet </h2>
+    <p> I write things from time to time -> <button hx-get = '/writings' hx-swap="outerHTML" hx-target="#home">Writings</button></p>
+    <p> I have an extensive reading list -> <button hx-get = '/readings' hx-swap="outerHTML" hx-target="#home">Readings 😭</button></p>
+    
+    <div id="articles">
+        <ul>
+            {% for notebook_file in notebook_files %}
+            <li><a 
+                href="#" 
+                hx-get="/notebook/{{ notebook_file }}"
+                hx-swap="outerHTML"
+                hx-target="#home"
+                
+                >{{ notebook_file }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+</body>
+</html> 
+
+

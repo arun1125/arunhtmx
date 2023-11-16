@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML Template</title>
+    <script src="https://unpkg.com/htmx.org@1.9.8"></script>
+</head>
+
+<body id="home">
+    <button hx-get="/" hx-swap="outerHTML" hx-target="#home">Go Home</button>
+    <p> checkout my other work -> <button hx-get = '/writings' hx-swap="outerHTML" hx-target="#home">Writings</button></p>
+    <p> stuff i'm reading -> <button hx-get = '/readings' hx-swap="outerHTML" hx-target="#home">Readings 😭</button></p>
+
+    
+    <div id="notebook_container">
+        {{ content|safe }}
+    </div>
+    
+</body>
+</html> 
+
+
