@@ -1,2 +1,9 @@
 https://stats.stackexchange.com/questions/244199/why-is-it-that-natural-log-changes-are-percentage-changes-what-is-about-logs-th
 https://matheusfacure.github.io/python-causality-handbook/Debiasing-with-Orthogonalization.html#:~:text=The%20idea%20of%20orthogonalization%20is,into%20three%20stages%20or%20models
+https://digiday.com/media/wtf-bid-shading/
+https://medium.com/nativeadvertising/dynamic-price-floors-a-call-for-standardization-af0fc40174d6
+
+https://www.monetizemore.com/blog/how-publishers-make-10x-more-money-with-dynamic-floors/
+
+https://lilianweng.github.io/posts/2023-06-23-agent/
+https://medium.com/airbnb-engineering/experiments-at-airbnb-e2db3abf39e7#.miqyczkzb
