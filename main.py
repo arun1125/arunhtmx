@@ -21,7 +21,7 @@ app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 
 @app.get("/", response_class=HTMLResponse)
-async def read_root(request: Request):
+async def home(request: Request):
     notebook_folder = './notebooks'
     notebook_files = [f for f in os.listdir(notebook_folder) if f.endswith('.ipynb')]
 
@@ -29,7 +29,7 @@ async def read_root(request: Request):
     return templates.TemplateResponse("index.html", {"request": request, "notebook_files": notebook_files})
 
 @app.get("/writings", response_class=HTMLResponse)
-async def read_root(request: Request):
+async def writings(request: Request):
     notebook_folder = './notebooks'
     notebook_files = [f for f in os.listdir(notebook_folder) if f.endswith('.ipynb')]
 
@@ -37,7 +37,7 @@ async def read_root(request: Request):
     return templates.TemplateResponse("writings.html", {"request": request, "notebook_files": notebook_files})
 
 @app.get("/readings", response_class=HTMLResponse)
-async def read_root(request: Request):
+async def readings(request: Request):
     with open('readinglist.txt', 'r') as f:
         links = [line.strip() for line in f.readlines()]
     return templates.TemplateResponse('readings.html', {'request': request, 'links': links})
@@ -45,7 +45,7 @@ async def read_root(request: Request):
 
 
 @app.get("/notebook/{notebook_file}", response_class=HTMLResponse)
-async def read_notebook(request: Request, notebook_file: str):
+async def load_notebook(request: Request, notebook_file: str):
     print(notebook_file)
     content = notebook_to_html(f'./notebooks/{notebook_file}')
     return templates.TemplateResponse("load_notebook.html", {"request": request, "content": content})
