@@ -34,7 +34,7 @@ async def read_root(request: Request):
     notebook_files = [f for f in os.listdir(notebook_folder) if f.endswith('.ipynb')]
 
     # Render the HTML template with the notebook files
-    return templates.TemplateResponse("articles.html", {"request": request, "notebook_files": notebook_files})
+    return templates.TemplateResponse("writings.html", {"request": request, "notebook_files": notebook_files})
 
 @app.get("/readings", response_class=HTMLResponse)
 async def read_root(request: Request):
