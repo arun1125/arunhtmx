@@ -131,3 +131,7 @@ dmypy.json
 
 # Databases
 *db.json
+
+
+#Dev notebooks
+dev_*.ipynb
