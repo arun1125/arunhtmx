@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arun's Website</title>
+    <title>aruns website</title>
     <script src="https://unpkg.com/htmx.org@1.9.8"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 </head>
 
 <body id="home" style="font-family: monospace">
-    <h1> Whats up im Arun </h1>
-    <h2> This is my corner of the internet </h2>
-    <h2> arun.monster was a cheap af domain </h2>
-    <p> I write things from time to time -> <button hx-get = '/writings' hx-swap="outerHTML" hx-target="#home">Writings</button></p>
-    <p> I have a reading list im bad at getting through-> <button hx-get = '/readings' hx-swap="outerHTML" hx-target="#home">Readings 😭</button></p>
+    <h1> whats up im arun </h1>
+    <h2> i use this to share thoughts/ideas/work i've done </h2>
+    <h2> if you're wondering arun.monster was just a cheap af domain</h2>
+    <p> things I write -> <button hx-get = '/writings' hx-swap="outerHTML" hx-target="#home" style="font-family: monospace">Writings</button></p>
+    <p> reading list -> <button hx-get = '/readings' hx-swap="outerHTML" hx-target="#home" style="font-family: monospace">Readings</button></p>
+    <p> view player averages per team -> <button hx-get = '/nba' hx-swap="outerHTML" hx-target="#home" style="font-family: monospace">nba!</button></p>
 </body>
 </html> 
 

@@ -10,13 +10,23 @@
 
 <body id="home" style="font-family: monospace">
     <button hx-get="/" hx-swap="outerHTML" hx-target="#home" style="font-family: monospace">Go Home</button>
-    <p> checkout my other work -> <button hx-get = '/writings' hx-swap="outerHTML" hx-target="#home" style="font-family: monospace">Writings</button></p>
-    <p> stuff i'm reading -> <button hx-get = '/readings' hx-swap="outerHTML" hx-target="#home" style="font-family: monospace">Readings 😭</button></p>
-    <div id="notebook_container" style="font-family: monospace">
+    <h1> I have some nba stats here </h1>
+
+    <h2> see the player breakdown of a team below </h2>
+    
+    <form hx-get="/nba/team" hx-target="#team_table" hx-swap="outerHTML">
+        <select name="team" required>
+            <option value="">Select Team</option>
+            {{ html_options | safe }}
+        </select>
+        <input type="number" name="year" placeholder="2024" required>
+        <button type="submit">Get Player Averages</button>
+    </form>
+
+    <div id="team_table" style="font-family: monospace">
         {{ content|safe }}
     </div>
-    
+
 </body>
 </html> 
-
 
