@@ -12,3 +12,5 @@ https://htmx.org/essays/hypermedia-driven-applications/
 https://htmx.org/essays/hateoas/
 https://htmx.org/essays/locality-of-behaviour/
 https://htmx.org/essays/splitting-your-apis/
+Practical Linear Algebra for Data Science
+https://arxiv.org/pdf/1802.05968.pdf
