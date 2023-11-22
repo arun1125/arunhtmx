@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple HTML Template</title>
+    <title>aruns website</title>
     <script src="https://unpkg.com/htmx.org@1.9.8"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 </head>
 
 <body id="home" style="font-family: monospace">
     <h1> this is my reading list </h1>
-    <button hx-get="/" hx-swap="outerHTML" hx-target="#home">Go Home</button>
-    <p> checkout my other work -> <button hx-get = '/writings' hx-swap="outerHTML" hx-target="#home">Writings</button></p>
+    <button hx-get="/" hx-swap="outerHTML" hx-target="#home" style="font-family: monospace">Go Home</button>
+    <p> checkout my other work -> <button hx-get = '/writings' hx-swap="outerHTML" hx-target="#home" style="font-family: monospace">Writings</button></p>
 
     <ul>
         {% for link in links %}
-        <li><a href="{{ link }}">{{ link }}</a></li>
+        <li><a href="{{ link }}" style="font-family: monospace">{{ link }}</a></li>
         {% endfor %}
     </ul>
     
