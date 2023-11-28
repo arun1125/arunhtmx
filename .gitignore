@@ -135,3 +135,9 @@ dmypy.json
 
 #Dev notebooks
 dev_*.ipynb
+
+#sound files
+*.ogg
+*.mp3
+*.wav
+*.csv
