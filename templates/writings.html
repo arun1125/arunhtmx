@@ -16,7 +16,7 @@
         <ul>
             {% for notebook_file in notebook_files %}
             <li><a 
-                href="#" 
+                href="/notebook/{{ notebook_file }}" 
                 hx-get="/notebook/{{ notebook_file }}"
                 hx-swap="outerHTML"
                 hx-target="#home"

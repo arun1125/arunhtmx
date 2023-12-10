@@ -43,7 +43,6 @@ async def readings(request: Request):
 
 @app.get("/notebook/{notebook_file}", response_class=HTMLResponse)
 async def load_notebook(request: Request, notebook_file: str):
-    print(notebook_file)
     content = notebook_to_html(f'./notebooks/{notebook_file}')
     return templates.TemplateResponse("load_notebook.html", {"request": request, "content": content})
 
