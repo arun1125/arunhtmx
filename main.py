@@ -6,7 +6,7 @@ import markdown2
 from nbconvert import HTMLExporter
 import requests
 import pandas as pd
-from database.db import supa
+from database.db import supabase
 
 
 def notebook_to_html(path):
