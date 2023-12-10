@@ -9,9 +9,9 @@
 </head>
 
 <body id="home" style="font-family: monospace">
-    <button hx-get="/" hx-swap="outerHTML" hx-target="#home" style="font-family: monospace">Go Home</button>
-    <p> checkout my other work -> <button hx-get = '/writings' hx-swap="outerHTML" hx-target="#home" style="font-family: monospace">Writings</button></p>
-    <p> stuff i'm reading -> <button hx-get = '/readings' hx-swap="outerHTML" hx-target="#home" style="font-family: monospace">Readings 😭</button></p>
+    <button hx-get="/" hx-swap="outerHTML" hx-target="#home" style="font-family: monospace" hx-push-url="true" >Go Home</button>
+    <p> checkout my other work -> <button hx-get = '/writings' hx-swap="outerHTML" hx-target="#home" style="font-family: monospace" hx-push-url="true" >Writings</button></p>
+    <p> stuff i'm reading -> <button hx-get = '/readings' hx-swap="outerHTML" hx-target="#home" style="font-family: monospace" hx-push-url="true" >Readings 😭</button></p>
     <div id="notebook_container" style="font-family: monospace">
         {{ content|safe }}
     </div>

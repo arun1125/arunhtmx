@@ -10,8 +10,8 @@
 
 <body id="home" style="font-family: monospace">
     <h1> i wrote some stuff below </h1>
-    <p> I have an extensive reading list -> <button hx-get = '/readings' hx-swap="outerHTML" hx-target="#home" style="font-family: monospace">Readings 😭</button></p>
-    <button hx-get="/" hx-swap="outerHTML" hx-target="#home" style="font-family: monospace">Go Home</button>
+    <p> I have an extensive reading list -> <button hx-get = '/readings' hx-swap="outerHTML" hx-target="#home" style="font-family: monospace" hx-push-url="true">Readings 😭</button></p>
+    <button hx-get="/" hx-swap="outerHTML" hx-target="#home" style="font-family: monospace" hx-push-url="true">Go Home</button>
     <div id="articles" style="font-family: monospace">
         <ul>
             {% for notebook_file in notebook_files %}
@@ -21,6 +21,7 @@
                 hx-swap="outerHTML"
                 hx-target="#home"
                 style="font-family: monospace"
+                hx-push-url="true"
                 >{{ notebook_file }}</a></li>
             {% endfor %}
         </ul>

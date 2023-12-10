@@ -11,11 +11,9 @@
 <body id="home" style="font-family: monospace">
     <h1> whats up im arun </h1>
     <h2> i use this to share thoughts/ideas/work i've done </h2>
-    <p> things I write -> <button hx-get = '/writings' hx-swap="outerHTML" hx-target="#home" style="font-family: monospace">Writings</button></p>
-    <p> reading list -> <button hx-get = '/readings' hx-swap="outerHTML" hx-target="#home" style="font-family: monospace">Readings</button></p>
-    <p> view player averages per team -> <button hx-get = '/nba' hx-swap="outerHTML" hx-target="#home" style="font-family: monospace">nba!</button></p>
-    <p> login for super secret special stuff <button hx-get = '/auth' hx-swap="outerHTML" hx-target="#home" style="font-family: monospace">Login</button></p>
-
+    <p> things I write -> <button hx-get = '/writings' hx-swap="outerHTML" hx-target="#home" style="font-family: monospace" hx-push-url="true">Writings</button></p>
+    <p> reading list -> <button hx-get = '/readings' hx-swap="outerHTML" hx-target="#home" style="font-family: monospace" hx-push-url="true">Readings</button></p>
+    <p> view player averages per team -> <button hx-get = '/nba' hx-swap="outerHTML" hx-target="#home" style="font-family: monospace" hx-push-url="true">nba!</button></p>
 
 </body>
 </html> 
