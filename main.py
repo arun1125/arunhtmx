@@ -6,6 +6,8 @@ import markdown2
 from nbconvert import HTMLExporter
 import requests
 import pandas as pd
+from database.db import supa
+
 
 def notebook_to_html(path):
     exporter = HTMLExporter()
@@ -90,3 +92,10 @@ async def home(request: Request, team: str = Query(...), year: int = Query(...))
     dfs = pd.read_html(resp.text)
     content = dfs[1].to_html()
     return f'<div id="team_table" style="font-family: monospace">{content}</div>'
+
+
+@app.get("/auth", response_class=HTMLResponse)
+async def auth(request: Request):
+    return templates.TemplateResponse(
+        "auth.html", {"request": request, "title": "Please Sign In or Sign Up"}
+    )

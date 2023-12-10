@@ -15,3 +15,4 @@ https://htmx.org/essays/splitting-your-apis/
 Practical Linear Algebra for Data Science
 https://arxiv.org/pdf/1802.05968.pdf
 https://github.com/karpathy/nn-zero-to-hero/tree/master
+https://www.mostlyharmlesseconometrics.com/book-contents/
