@@ -22,15 +22,14 @@
             <a href="/photos"><h2 class="font-mono text-sm hover:underline">Photos</h2></a>
         </div>
 
-    </section> 
-        <div id = 'noteboook_container' class = "flex items-center justify-between gap-x-10" style="font-family: monospace">
-            {{ content|safe }}
-        </div>       
+        <ul>
+            {% for link in links %}
+            <li> <a href="{{ link }}" style="font-family: monospace"> + {{ link }}</a></li>
+            {% endfor %}
+        </ul>
+        
+    </section>        
     </main>
     
 </body>
 </html>
-
-
-
-

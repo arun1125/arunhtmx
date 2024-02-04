@@ -22,15 +22,23 @@
             <a href="/photos"><h2 class="font-mono text-sm hover:underline">Photos</h2></a>
         </div>
 
-    </section> 
-        <div id = 'noteboook_container' class = "flex items-center justify-between gap-x-10" style="font-family: monospace">
-            {{ content|safe }}
-        </div>       
+        <div id="articles" style="font-family: monospace">
+            <ul>
+                {% for notebook_file in notebook_files %}
+                <li><a 
+                    href="/writing/{{ notebook_file }}" 
+                    hx-get="/writing/{{ notebook_file }}"
+                    hx-swap="outerHTML"
+                    hx-target="#home"
+                    style="font-family: monospace"
+                    hx-push-url="true"
+                    >{{ notebook_file }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+
+    </section>        
     </main>
     
 </body>
 </html>
-
-
-
-

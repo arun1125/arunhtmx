@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aruns website</title>
+    <script src="https://unpkg.com/htmx.org@1.9.8"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+</head>
+
+<body id="home" style="font-family: monospace">
+    <h1> whats up im arun </h1>
+    <h2> i use this to share thoughts/ideas/work i've done </h2>
+    <p> things I write -> <button hx-get = '/writings' hx-swap="outerHTML" hx-target="#home" style="font-family: monospace" hx-push-url="true">Writings</button></p>
+    <p> reading list -> <button hx-get = '/readings' hx-swap="outerHTML" hx-target="#home" style="font-family: monospace" hx-push-url="true">Readings</button></p>
+    <p> view player averages per team -> <button hx-get = '/nba' hx-swap="outerHTML" hx-target="#home" style="font-family: monospace" hx-push-url="true">nba!</button></p>
+
+</body>
+</html> 
+
