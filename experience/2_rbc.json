@@ -4,9 +4,9 @@
     "Time": "April 2019 - May 2022",
     "Title": "Data Scientist",
     "Work": {
-        "task1": "Developed and maintained a machine learning model to predict the performance of ad-blocking filters.",
-        "task2": "Developed and maintained a machine learning model to predict the performance of ad-blocking filters.",
-        "task3": "Developed and maintained a machine learning model to predict the performance of ad-blocking filters.",
-        "task4": "Developed and maintained a machine learning model to predict the performance of ad-blocking filters."
+        "task1": "I developed the nationwide cash forecasting system to predict how much cash a branch would need to order on a daily basis to meet customer demand. This system was deployed to the entire country saving $2 Million (CAD) annually for the lifetime of the project.",
+        "task2": "I built a Credit Recommendation Model which cross recommended credit products to our existing small business clients. The model resulted in 55 new products and 170 accounts with a total net limit increase of 12MM in just Q1 2021/22",
+        "task3": "During the initial weeks of covid I was tasked to develop a way of showing how transaction activity had changed across the Greater Toronto Area (GTA). We used this to inform policy on branch closures and cash management This dashboard was presented to the vector institute.",
+        "task4": "Created the MVP model for the RBC personalization product. The product was designed to give personalized offers on the RBC avion platform."
     }
 }

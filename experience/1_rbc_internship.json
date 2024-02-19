@@ -4,9 +4,8 @@
     "Time": "June 2018 - September 2018",
     "Title": "Data Science Intern",
     "Work": {
-        "task1": "Developed and maintained a machine learning model to predict the performance of ad-blocking filters.",
-        "task2": "Developed and maintained a machine learning model to predict the performance of ad-blocking filters.",
-        "task3": "Developed and maintained a machine learning model to predict the performance of ad-blocking filters.",
-        "task4": "Developed and maintained a machine learning model to predict the performance of ad-blocking filters."
+        "task1": "Amplify is an international program for teams of students to build disruptive technology solutions for business problems within RBC.",
+        "task2": "We built RBC Ark a tool which used a combination of supervised and unsupervised machine learning techniques to create a novel hashing algorithm to match client information from disparate databases. We co-authored a provisional patent for this algorithm.",
+        "task4": "We presented our solution to the RBC CTO and other senior executives beating out 18 teams to win the 'Most Disruptive Technological' solution and $10,000 in prize money."
     }
 }

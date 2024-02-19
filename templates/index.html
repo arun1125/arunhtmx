@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arun</title>
+    <title>{{ data['tab_title'][0] }}</title>
     <script src="https://unpkg.com/htmx.org@1.9.8"></script>
-    <!-- Add link to CSS file -->
-    <!-- <link rel="stylesheet" href="styles.css"> -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body style="font-family: monospace">
@@ -35,7 +33,7 @@
             </div>
             </div>
             <img alt="My Headshot" loading="lazy" width="170" height="100" decoding="async" data-nimg="1" class="max-h-52 rounded-2xl" style="color:transparent" 
-             src="https://pbs.twimg.com/profile_images/1731200932082315264/n8fxk3sE_400x400.jpg">
+             src="{{ data['image_url'][0] }}">
         </div>
         <section class="flex min-h-0 flex-col gap-y-3">
             <h2 class="text-xl font-bold">About</h2>

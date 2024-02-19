@@ -7,6 +7,12 @@ from nbconvert import HTMLExporter
 import os
 import json
 
+about_data = {}
+for _, _, files in os.walk('./about'):
+    for file in files:
+        with open(f'./about/{file}', 'r') as f:
+            text = [line.strip() for line in f.readlines()]
+            about_data[file[:-4]] = text
 
 def notebook_to_html(path):
     exporter = HTMLExporter()
@@ -63,18 +69,10 @@ templates = Jinja2Templates(directory="templates")
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request):
 
-    about_data = {}
-    for _, _, files in os.walk('./about'):
-        for file in files:
-            with open(f'./about/{file}', 'r') as f:
-                text = [line.strip() for line in f.readlines()]
-                about_data[file[:-4]] = text
-
     experience_htmls = []
 
     for _, _, files in os.walk('./experience'):
         for file in sorted(files, reverse=True):
-            print(file)
             with open(f'./experience/{file}') as f:
                 experience_data = json.load(f)
                 experience_htmls.append(experience_html(experience_data))
@@ -91,14 +89,14 @@ async def writings(request: Request):
         for subdir in subdirList:
             categories.append(subdir)
 
-    return templates.TemplateResponse("categories.html", {"request": request, "categories": categories, "category": "writing"})
+    return templates.TemplateResponse("categories.html", {"request": request, "categories": categories, "category": "writing", "data": about_data})
 
 @app.get("/writing/{category}", response_class=HTMLResponse)
 async def load_notebook(request: Request, category: str):
     notebook_folder = f'./writings/{category}'
     notebook_files = [f for f in os.listdir(notebook_folder) if f.endswith('.ipynb')]
 
-    return templates.TemplateResponse("notebooks.html", {"request": request, "category":category, "notebook_files": notebook_files})
+    return templates.TemplateResponse("notebooks.html", {"request": request, "category":category, "notebook_files": notebook_files, "data": about_data})
 
 
 @app.get("/writing/{category}/{notebook_file}", response_class=HTMLResponse)
@@ -106,8 +104,7 @@ async def load_notebook(request: Request, category:str, notebook_file: str):
     content = notebook_to_html(f'./writings/{category}/{notebook_file}')
     notebook_folder = f'./writings/{category}'
     notebook_files = [f for f in os.listdir(notebook_folder) if f.endswith('.ipynb')]
-    # Render the HTML template with the notebook files
-    return templates.TemplateResponse("load_notebook.html", {"request": request, "content": content, "notebook_file": notebook_files})
+    return templates.TemplateResponse("load_notebook.html", {"request": request, "content": content, "notebook_file": notebook_files, "data": about_data})
 
 @app.get("/readinglist", response_class=HTMLResponse)
 async def readinglist(request: Request):
@@ -118,7 +115,7 @@ async def readinglist(request: Request):
         for subdir in subdirList:
             categories.append(subdir)
 
-    return templates.TemplateResponse("categories.html", {"request": request, "categories": categories, "category": "readinglist"})
+    return templates.TemplateResponse("categories.html", {"request": request, "categories": categories, "category": "readinglist", "data": about_data})
 
 @app.get("/readinglist/{category}", response_class=HTMLResponse)
 async def load_notebook(request: Request, category: str):
@@ -126,4 +123,4 @@ async def load_notebook(request: Request, category: str):
     with open(f'./readings/{category}/readinglist.txt', 'r') as f:
         links = [line.strip() for line in f.readlines()]
 
-    return templates.TemplateResponse('readinglist.html', {'request': request, 'links': links})
+    return templates.TemplateResponse('readinglist.html', {'request': request, 'links': links, "data": about_data})

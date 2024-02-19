@@ -1,12 +1,15 @@
 {
-    "CompanyName": "Eyeo GmbH",
+    "CompanyName": "Blockthrough (acquired by Eyeo GmbH)",
     "Location": "Remote, Canada",
     "Time": "June 2022 - Present",
     "Title": "Senior Data Scientist",
     "Work": {
-        "task1": "Developed and maintained a machine learning model to predict the performance of ad-blocking filters.",
-        "task2": "Developed and maintained a machine learning model to predict the performance of ad-blocking filters.",
-        "task3": "Developed and maintained a machine learning model to predict the performance of ad-blocking filters.",
-        "task4": "Developed and maintained a machine learning model to predict the performance of ad-blocking filters."
+        "task1": "Leading the development of our Price Floor and SPO model to optimize revenue. I have explored and combined various strategies using traditional economics based models to building machine learning models to predict and set the optimal price floor for each ad unit.",
+        "task2": "Implemented several Causal Machine Learning methods to run 'what if' analysis on several business decisions across various clients and geos.",
+        "task3": "Created a Hierarchical Revenue Forecasting Model to forecast revenue monthly for the next 12 months and also a daily forecasting model to identify when clients are underperforming so we can proactively address the issues",
+        "task4": "Developed a tool to automate A/B testing and product analytics",
+        "task5": "Built several ETL pipelines to create dashboards and reports for the company",
+        "task6": "Mentored and trained junior data scientists and data analysts",
+        "task7": "Lead team whilst director was away on Maternity Leave"
     }
 }
