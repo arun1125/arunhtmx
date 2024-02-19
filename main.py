@@ -4,7 +4,6 @@ from fastapi.templating import Jinja2Templates
 import os
 import markdown2
 from nbconvert import HTMLExporter
-import re
 import os
 
 
@@ -37,7 +36,7 @@ async def writings(request: Request):
         for subdir in subdirList:
             categories.append(subdir)
 
-    return templates.TemplateResponse("writing.html", {"request": request, "notebook_categories": categories})
+    return templates.TemplateResponse("categories.html", {"request": request, "categories": categories, "category": "writing"})
 
 @app.get("/writing/{category}", response_class=HTMLResponse)
 async def load_notebook(request: Request, category: str):
@@ -55,9 +54,21 @@ async def load_notebook(request: Request, category:str, notebook_file: str):
     # Render the HTML template with the notebook files
     return templates.TemplateResponse("load_notebook.html", {"request": request, "content": content, "notebook_file": notebook_files})
 
-
 @app.get("/readinglist", response_class=HTMLResponse)
-async def readings(request: Request):
-    with open('readinglist.txt', 'r') as f:
+async def writings(request: Request):
+    folder = './readings'
+
+    categories = []
+    for _, subdirList, _ in os.walk(folder):
+        for subdir in subdirList:
+            categories.append(subdir)
+
+    return templates.TemplateResponse("categories.html", {"request": request, "categories": categories, "category": "readinglist"})
+
+@app.get("/readinglist/{category}", response_class=HTMLResponse)
+async def load_notebook(request: Request, category: str):
+
+    with open(f'./readings/{category}/readinglist.txt', 'r') as f:
         links = [line.strip() for line in f.readlines()]
+
     return templates.TemplateResponse('readinglist.html', {'request': request, 'links': links})

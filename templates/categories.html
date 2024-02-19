@@ -22,16 +22,16 @@
 
         <div id="articles" style="font-family: monospace">
             <ul>
-                {% for notebook_categories in notebook_categories %}
+                {% for c in categories %}
                 <li><a 
-                    href="/writing/{{ notebook_categories }}" 
-                    hx-get="/writing/{{ notebook_categories }}"
+                    href="/{{ category }}/{{ c }}" 
+                    hx-get="/{{ category }}/{{ c }}"
                     hx-swap="outerHTML"
                     hx-target="#home"
                     style="font-family: monospace"
                     hx-push-url="true"
                     class = "inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs"
-                    >{{ notebook_categories }}</a>
+                    >{{ c }}</a>
                 </li>
                 {% endfor %}
             </ul>

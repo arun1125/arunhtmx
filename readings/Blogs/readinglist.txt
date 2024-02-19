@@ -1,0 +1,7 @@
+https://htmx.org/essays/hypermedia-driven-applications/
+https://htmx.org/essays/hateoas/
+https://htmx.org/essays/locality-of-behaviour/
+https://htmx.org/essays/splitting-your-apis/
+https://medium.com/airbnb-engineering/experiments-at-airbnb-e2db3abf39e7#.miqyczkzb
+https://hypermedia.systems/hypermedia-reintroduction/#_what_is_hypermedia
+https://valeman.medium.com/conformal-prediction-forecasting-with-mapie-library-for-conformal-prediction-7aac033ae3ef
