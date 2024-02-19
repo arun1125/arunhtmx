@@ -55,7 +55,7 @@ async def load_notebook(request: Request, category:str, notebook_file: str):
     return templates.TemplateResponse("load_notebook.html", {"request": request, "content": content, "notebook_file": notebook_files})
 
 @app.get("/readinglist", response_class=HTMLResponse)
-async def writings(request: Request):
+async def readinglist(request: Request):
     folder = './readings'
 
     categories = []
