@@ -1,0 +1,9 @@
+Time Series Forecasting
+Causal Inference
+Optimisation Algorithms
+Classical Machine Learning
+Transfer Learning
+Data Vizualisation
+ETL pipelines
+Machine Learning Systems Engineering
+Data Analysis

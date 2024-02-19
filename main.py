@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Request, Query
+from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 import os
@@ -76,6 +76,8 @@ async def home(request: Request):
             with open(f'./experience/{file}') as f:
                 experience_data = json.load(f)
                 experience_htmls.append(experience_html(experience_data))
+
+    print(about_data['skills'])
 
     return templates.TemplateResponse("index.html", {"request": request, "data": about_data, "experience_htmls": experience_htmls})
 
