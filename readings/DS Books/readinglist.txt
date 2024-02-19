@@ -1,0 +1,12 @@
+https://www.mostlyharmlesseconometrics.com/book-contents/
+Practical Linear Algebra for Data Science
+https://www.uvm.edu/~statdhtx/StatPages/R/RandomizationTestsWithR/andersonTerBrack.pdf
+https://matheusfacure.github.io/python-causality-handbook/Debiasing-with-Orthogonalization.html#:~:text=The%20idea%20of%20orthogonalization%20is,into%20three%20stages%20or%20models
+https://faculty.chicagobooth.edu/ruey-s-tsay/research/analysis-of-financial-time-series-3rd-edition
+http://www.stat.yale.edu/~pollard/Books/Pttm/TOC22sep23.pdf
+https://arxiv.org/abs/2310.20360
+https://twitter.com/eatonphil/status/1741467787145457847
+https://deeplearningmath.org/
+https://www.mbmlbook.com/toc.html
+https://www.bishopbook.com/
+https://asl.epfl.ch/wp-content/uploads/2022/11/Sayed_Cambridge_Announcement.pdf
