@@ -1,4 +1,5 @@
 fastapi==0.68.1
+uvicorn==0.24.0.post1
 jupyter==1.0.0
 jinja2==3.0.1
 markdown2==2.4.1
