@@ -1,0 +1,12 @@
+{
+    "CompanyName": "Eyeo GmbH",
+    "Location": "Remote, Canada",
+    "Time": "June 2022 - Present",
+    "Title": "Senior Data Scientist",
+    "Work": {
+        "task1": "Developed and maintained a machine learning model to predict the performance of ad-blocking filters.",
+        "task2": "Developed and maintained a machine learning model to predict the performance of ad-blocking filters.",
+        "task3": "Developed and maintained a machine learning model to predict the performance of ad-blocking filters.",
+        "task4": "Developed and maintained a machine learning model to predict the performance of ad-blocking filters."
+    }
+}

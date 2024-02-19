@@ -1,0 +1,12 @@
+{
+    "CompanyName": "Royal Bank of Canada (RBC)",
+    "Location": "Toronto, Canada",
+    "Time": "April 2019 - May 2022",
+    "Title": "Data Scientist",
+    "Work": {
+        "task1": "Developed and maintained a machine learning model to predict the performance of ad-blocking filters.",
+        "task2": "Developed and maintained a machine learning model to predict the performance of ad-blocking filters.",
+        "task3": "Developed and maintained a machine learning model to predict the performance of ad-blocking filters.",
+        "task4": "Developed and maintained a machine learning model to predict the performance of ad-blocking filters."
+    }
+}

@@ -21,17 +21,17 @@
         </div>
         <div class="flex items-center justify-between gap-x-10">
             <div class="flex-1 space-y-1.5">
-                <h1 class="text-2xl font-bold">Arunachalam Thirunavukkarasu</h1>
-                <p class="text-muted-foreground max-w-md text-pretty font-mono text-sm">Senior Data Scientist, Fitness, Film Photography.</p>
+                <h1 class="text-2xl font-bold">{{ data['name'][0] }}</h1>
+                <p class="text-muted-foreground max-w-md text-pretty font-mono text-sm">{{ data['headline'][0] }}</p>
 
                 <div class="text-muted-foreground flex gap-x-2 pt-1 font-mono text-sm print:hidden">
                 
-                <a href="mailto:arunthiru77@gmail.com" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-background hover:bg-accent hover:text-accent-foreground size-8"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail size-4"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></a>
+                <a href="mailto:{{ data['email'][0] }}" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-background hover:bg-accent hover:text-accent-foreground size-8"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail size-4"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></a>
         
-                <a href="https://www.linkedin.com/in/arun-thiru-2344b810a/" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-background hover:bg-accent hover:text-accent-foreground size-8"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin size-4"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                <a href="{{ data['linkedin'][0] }}" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-background hover:bg-accent hover:text-accent-foreground size-8"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin size-4"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
             
-                <a href="https://twitter.com/arun1995plus1" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-background hover:bg-accent hover:text-accent-foreground size-8"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter size-4"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a></div><div class="text-muted-foreground hidden flex-col gap-x-1 font-mono text-sm print:flex">
-                <a href="mailto:arunthiru77@gmail.com"><span class="underline">arunthiru77@gmail.com</span></a>
+                <a href="{{ data['twitter'][0] }}" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-background hover:bg-accent hover:text-accent-foreground size-8"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter size-4"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a></div><div class="text-muted-foreground hidden flex-col gap-x-1 font-mono text-sm print:flex">
+                <a href="mailto:{{ data['email'][0] }}"><span class="underline">{{ data['email'][0] }}</span></a>
             </div>
             </div>
             <img alt="My Headshot" loading="lazy" width="170" height="100" decoding="async" data-nimg="1" class="max-h-52 rounded-2xl" style="color:transparent" 
@@ -40,9 +40,7 @@
         <section class="flex min-h-0 flex-col gap-y-3">
             <h2 class="text-xl font-bold">About</h2>
             <p class="text-muted-foreground text-pretty font-mono text-sm">
-                I'm a Senior Data Scientist at Eyeo GmbH (they own AdBlock and AdBlock plus). 
-                My work interests include Forecasting, Causal Inference and Building algorithms for Real Time Bidding (RTB).
-                I also enjoy writing, reading and fitness. 
+                {{ data['intro'] | join(" ") }}
             </p>
             <br>
             <p class="text-muted-foreground text-pretty font-mono text-sm">
@@ -52,27 +50,10 @@
 
         <section class="flex min-h-0 flex-col gap-y-3">
             <h2 class="text-xl font-bold">Work Experience</h2>
-            <div class="rounded-lg bg-card text-card-foreground">
-                <div class="flex flex-col space-y-1.5">
-                    <div class="flex items-center justify-between gap-x-2 gap-y-2 text-base">
-                        <h3 class="inline-flex flex-wrap items-center gap-x-1 gap-y-2 font-semibold leading-none">
-                            <a class="gap-x-2 hover:underline" >Eyeo GmbH </a>
-                                <span class="">
-                                    <div class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs">
-                                        Remote, Canada
-                                    </div>
-                                </span>
-                            </h3>
-                            <div class="flex-0 text-sm tabular-nums text-gray-500">
-                                June 2022<!-- --> - <!-- -->Present
-                            </div>
-                        </div>
-                        <h4 class="font-mono text-sm leading-none">Senior Data Scientist</h4>
-                    </div>
-                    <div class="text-pretty font-mono text-muted-foreground mt-2 text-xs">
-                        Insert Text here
-        </div>
-        <!-- <div class="flex items-center"> -->
+            {% for work_experience in experience_htmls %}
+                {{ work_experience | safe }}
+            {% endfor %}
+            </div>
 
     </section>        
     </main>

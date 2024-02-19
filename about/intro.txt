@@ -1,0 +1,3 @@
+I'm a Senior Data Scientist at Eyeo GmbH (they own AdBlock and AdBlock plus). 
+My work interests include Building algorithms for Real Time Bidding (RTB), Time Series Forecasting and Causal Inference.
+I also enjoy writing, reading and fitness. 
