@@ -20,19 +20,23 @@
             <a href="/readinglist"><h2 class="font-mono text-sm hover:underline">Reading list</h2></a>
         </div>
 
-        <ul>
-            {% for link in links %}
-            <li> 
-                <a 
-                href="{{ link }}" 
-                style="font-family: monospace"
-                class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs">
-                 + {{ link }}
-                </a>
-            </li>
-            {% endfor %}
-        </ul>
-        
+        <div id="articles" style="font-family: monospace">
+            <ul>
+                {% for notebook_file in notebook_files %}
+                <li><a 
+                    href="/writing/{{ category }}/{{ notebook_file }}" 
+                    hx-get="/writing/{{ category }}/{{ notebook_file }}"
+                    hx-swap="outerHTML"
+                    hx-target="#home"
+                    style="font-family: monospace"
+                    hx-push-url="true"
+                    class = "inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs"
+                    >{{ notebook_file }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
     </section>        
     </main>
     

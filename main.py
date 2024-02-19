@@ -4,7 +4,8 @@ from fastapi.templating import Jinja2Templates
 import os
 import markdown2
 from nbconvert import HTMLExporter
-import pandas as pd
+import re
+import os
 
 
 def notebook_to_html(path):
@@ -29,15 +30,27 @@ async def home(request: Request):
 
 @app.get("/writing", response_class=HTMLResponse)
 async def writings(request: Request):
-    notebook_folder = './writings'
-    notebook_files = [f for f in os.listdir(notebook_folder) if f.endswith('.ipynb')]
-    # Render the HTML template with the notebook files
-    return templates.TemplateResponse("writing.html", {"request": request, "notebook_files": notebook_files})
+    folder = './writings'
 
-@app.get("/writing/{notebook_file}", response_class=HTMLResponse)
-async def load_notebook(request: Request, notebook_file: str):
-    content = notebook_to_html(f'./writings/{notebook_file}')
-    notebook_folder = './writings'
+    categories = []
+    for _, subdirList, _ in os.walk(folder):
+        for subdir in subdirList:
+            categories.append(subdir)
+
+    return templates.TemplateResponse("writing.html", {"request": request, "notebook_categories": categories})
+
+@app.get("/writing/{category}", response_class=HTMLResponse)
+async def load_notebook(request: Request, category: str):
+    notebook_folder = f'./writings/{category}'
+    notebook_files = [f for f in os.listdir(notebook_folder) if f.endswith('.ipynb')]
+
+    return templates.TemplateResponse("notebooks.html", {"request": request, "category":category, "notebook_files": notebook_files})
+
+
+@app.get("/writing/{category}/{notebook_file}", response_class=HTMLResponse)
+async def load_notebook(request: Request, category:str, notebook_file: str):
+    content = notebook_to_html(f'./writings/{category}/{notebook_file}')
+    notebook_folder = f'./writings/{category}'
     notebook_files = [f for f in os.listdir(notebook_folder) if f.endswith('.ipynb')]
     # Render the HTML template with the notebook files
     return templates.TemplateResponse("load_notebook.html", {"request": request, "content": content, "notebook_file": notebook_files})
