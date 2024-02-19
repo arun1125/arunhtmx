@@ -77,8 +77,6 @@ async def home(request: Request):
                 experience_data = json.load(f)
                 experience_htmls.append(experience_html(experience_data))
 
-    print(about_data['skills'])
-
     return templates.TemplateResponse("index.html", {"request": request, "data": about_data, "experience_htmls": experience_htmls})
 
 
